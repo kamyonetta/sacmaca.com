@@ -17,4 +17,3 @@ node_modules/
 # Logs
 *.log
 wp-content/plugins/cmp-coming-soon-maintenance/
-deploy.sh
