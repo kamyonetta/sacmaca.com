@@ -1,1 +1,58 @@
-*{box-sizing:border-box}body{margin:0;background:transparent;color:#f0e9da;font:12px Arial,sans-serif}#mp3-player{border:1px solid #bba0e54a;background:#211a2a;padding:15px 18px;max-width:440px;min-height:140px}.track{display:flex;gap:10px;align-items:center}.record{font:36px/1 Georgia,serif;color:#bba0e5}.eyebrow{font-size:8px;letter-spacing:1.5px;color:#b6aabd}#track-name{margin-top:4px;font-size:12px}#player-status{margin-left:auto;color:#d6ed88;font-size:9px;max-width:100px;text-align:right}.playback{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px}#controls{display:flex;gap:8px;align-items:center}button{background:transparent;border:0;color:#f0e9da;font-size:16px;padding:5px 8px;min-width:32px;min-height:32px;cursor:pointer}button:hover{color:#d6ed88}#play-pause{background:#d6ed88;color:#17131f;border-radius:50%;font-size:13px}.volume{display:flex;align-items:center;gap:7px;font-size:8px;color:#b6aabd}.volume input{width:65px}input[type=range]{accent-color:#d6ed88;cursor:pointer;height:16px;margin:0;min-width:0}.seek{display:flex;align-items:center;gap:10px;margin-top:6px;font-size:9px;color:#b6aabd}.seek input{width:100%;flex:1}.seek span{font-variant-numeric:tabular-nums}button:focus-visible,input:focus-visible{outline:2px solid #bba0e5;outline-offset:3px}@media(max-width:270px){#mp3-player{padding:9px}.record{display:none}.volume input{width:42px}.eyebrow{font-size:7px;letter-spacing:.7px}#player-status{font-size:8px;max-width:60px}#controls{gap:2px}}
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: transparent; /* Keeps background black */
+    font-family: 'Press Start 2P', sans-serif;
+    text-align: center;
+    color: #800080; /* Solid Purple Text */
+}
+
+#mp3-player {
+    width: 180px;
+    height: auto;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7); /* Transparent Black */
+    border: 3px solid #800080; /* Solid Purple Border */
+    box-shadow: 0 0 10px #800080; /* Purple Glow */
+    border-radius: 10px;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+#controls button {
+    font-size: 16px;  /* Made buttons smaller */
+    padding: 5px 8px;
+    background-color: #4B0082; /* Darker Purple Buttons */
+    color: #fff; /* White Text */
+    border: 2px solid #4B0082;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#controls button:hover {
+    background-color: #9932CC; /* Lighter Purple on Hover */
+    color: #fff;
+}
+
+#volume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+#volume label {
+    color: #fff; /* White Speaker Icon */
+    margin-right: 5px;
+}
+
+#volume-slider {
+    width: 60%;
+    height: 4px;
+    background-color: #fff; /* White Volume Bar */
+    border-radius: 2px;
+}
