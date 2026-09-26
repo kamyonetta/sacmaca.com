@@ -1,0 +1,30 @@
+[11-Feb-2025 15:40:57 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[12-Feb-2025 01:17:13 UTC] PHP Warning:  Undefined array key "HTTP_USER_AGENT" in /home/sacmacac/public_html/wp-content/plugins/wptouch/core/class-wptouch-pro.php on line 2799
+[12-Feb-2025 02:38:13 UTC] PHP Warning:  Undefined array key "HTTP_USER_AGENT" in /home/sacmacac/public_html/wp-content/plugins/wptouch/core/class-wptouch-pro.php on line 2799
+[12-Feb-2025 06:40:25 UTC] PHP Warning:  Undefined array key "HTTP_USER_AGENT" in /home/sacmacac/public_html/wp-content/plugins/wptouch/core/class-wptouch-pro.php on line 2799
+[13-Feb-2025 05:33:06 UTC] PHP Warning:  Undefined array key "HTTP_USER_AGENT" in /home/sacmacac/public_html/wp-content/plugins/wptouch/core/class-wptouch-pro.php on line 2799
+[13-Feb-2025 06:37:03 UTC] PHP Warning:  Undefined array key "HTTP_USER_AGENT" in /home/sacmacac/public_html/wp-content/plugins/wptouch/core/class-wptouch-pro.php on line 2799
+[13-Feb-2025 10:04:13 UTC] PHP Warning:  Undefined array key "HTTP_USER_AGENT" in /home/sacmacac/public_html/wp-content/plugins/wptouch/core/class-wptouch-pro.php on line 2799
+[14-Feb-2025 06:49:31 UTC] PHP Warning:  Undefined array key "HTTP_USER_AGENT" in /home/sacmacac/public_html/wp-content/plugins/wptouch/core/class-wptouch-pro.php on line 2799
+[18-Feb-2025 08:36:13 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 58
+[18-Feb-2025 08:36:30 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 58
+[18-Feb-2025 08:39:08 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 58
+[18-Feb-2025 08:40:48 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 58
+[18-Feb-2025 08:42:26 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 08:42:31 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 08:42:33 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 08:44:27 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 08:45:30 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 08:46:18 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 08:52:05 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 08:52:44 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 08:58:35 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 08:58:44 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 08:59:41 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 08:59:42 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 08:59:44 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 09:00:48 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 09:02:39 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 09:03:21 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[18-Feb-2025 09:04:03 UTC] PHP Warning:  Undefined variable $feedback in /home/sacmacac/public_html/wp-content/themes/astra-child/page-contact.php on line 60
+[21-Sep-2026 13:52:51 UTC] PHP Warning:  Constant WP_DEBUG already defined in /home/sacmacac/public_html/wp-config.php on line 90

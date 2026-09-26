@@ -1,0 +1,2 @@
+[11-Feb-2025 15:13:06 UTC] PHP Warning:  Undefined property: WPtouchSettings::$primary_menu in /home/sacmacac/public_html/wp-content/plugins/wptouch/core/menu-walkers.php on line 63
+[11-Feb-2025 15:13:06 UTC] PHP Warning:  Undefined property: WPtouchSettings::$primary_menu in /home/sacmacac/public_html/wp-content/plugins/wptouch/core/menu-walkers.php on line 75

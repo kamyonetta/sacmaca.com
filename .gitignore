@@ -1,0 +1,19 @@
+# WordPress credentials
+wp-config.php
+
+# Environment/secrets
+.env
+.env.*
+*.key
+*.pem
+
+# macOS
+.DS_Store
+
+# Node/Svelte
+node_modules/
+.svelte-kit/
+
+# Logs
+*.log
+wp-content/plugins/cmp-coming-soon-maintenance/
