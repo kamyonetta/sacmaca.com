@@ -79,7 +79,10 @@ commands = [
 for name in files:
     parent = str(pathlib.PurePosixPath(name).parent)
     if parent != '.':
-        commands.append('mkdir -p ' + quote('/' + parent))
+        # This server returns 550 for mkdir -p on an existing directory.
+        # Check it first; conditional failure must not abort the upload batch.
+        commands.append('cd ' + quote('/' + parent) + ' || mkdir -p ' + quote('/' + parent))
+        commands.append('cd /')
     commands.append('put ' + quote(str(root / name)) + ' -o ' + quote('/' + name))
 commands.append('bye')
 # Pipe commands in memory. Never use a credential-bearing command argument/file.
