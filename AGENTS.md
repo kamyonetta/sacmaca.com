@@ -1,5 +1,8 @@
 # Project workflow
 
+- Never add or rewrite website copy unless the user explicitly supplies or approves the exact text.
+- Keep KRMF out of the public homepage and navigation until explicitly authorized.
+
 - Inspect the relevant implementation before editing. This repository contains WordPress and custom components; do not assume all functionality uses WordPress. Preserve unrelated functionality and reuse existing code.
 - Work locally, build/test the affected application, and review the Git diff for unrelated changes.
 - Never read out, commit, or deploy credentials, `.env` files, `wp-config.php`, user uploads, or production-only data. Preserve server configuration.
