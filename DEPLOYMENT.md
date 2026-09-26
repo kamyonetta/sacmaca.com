@@ -11,7 +11,7 @@ In your own Terminal, from this repository, run:
 Enter the FTP password at the hidden prompt. The final bare `security -w`
 prompts without including the password in shell history or process arguments.
 This creates/updates the generic Keychain item `sacmaca.com-ftps-deploy` for
-`deploy@sacmaca.com`. The password is never stored in the repository.
+`efecan2@sacmaca.com`. The password is never stored in the repository.
 
 Then validate connectivity without writing to production:
 

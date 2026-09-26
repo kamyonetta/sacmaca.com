@@ -7,7 +7,7 @@ if [ "${1:-}" = "--setup-keychain" ]; then
     [ "$#" -eq 1 ] || exit 2
     # A final bare -w prompts securely; no password in argv or shell history.
     exec /usr/bin/security add-generic-password -U \
-        -a 'deploy@sacmaca.com' -s 'sacmaca.com-ftps-deploy' \
+        -a 'efecan2@sacmaca.com' -s 'sacmaca.com-ftps-deploy' \
         -l 'sacmaca.com FTPS deployment' -T /usr/bin/security -w
 fi
 exec python3 - "$@" <<'PY'
@@ -29,7 +29,7 @@ if not args or args == ['--help']:
   ./deploy.sh --upload FILE [...]    Upload only those files, never mirror/delete
 
 Keychain service: sacmaca.com-ftps-deploy
-Account: deploy@sacmaca.com
+Account: efecan2@sacmaca.com
 Run --check before uploading. Paths are relative to this repository.
 Commit changes before uploading. No default full-site deployment.''')
     sys.exit(0)
@@ -59,7 +59,7 @@ lftp = shutil.which('lftp')
 if not lftp:
     fail('lftp is required.')
 credential = subprocess.run(['/usr/bin/security', 'find-generic-password',
-    '-a', 'deploy@sacmaca.com', '-s', 'sacmaca.com-ftps-deploy', '-w'],
+    '-a', 'efecan2@sacmaca.com', '-s', 'sacmaca.com-ftps-deploy', '-w'],
     stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
 if credential.returncode:
     fail('Keychain credential unavailable. Run ./deploy.sh --setup-keychain in your local Terminal.')
@@ -73,7 +73,7 @@ commands = [
     'set ftp:ssl-force yes', 'set ftp:ssl-auth TLS',
     'set ftp:ssl-protect-data yes', 'set ssl:verify-certificate yes',
     'set ftp:passive-mode yes', 'set xfer:clobber yes',
-    'open -u ' + quote('deploy@sacmaca.com,' + password) + ' ftp://ams201.greengeeks.net:21',
+    'open -u ' + quote('efecan2@sacmaca.com,' + password) + ' ftp://ams201.greengeeks.net:21',
     'cd /', 'cls -d index.php wp-admin wp-content wp-includes',
 ]
 for name in files:
