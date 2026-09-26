@@ -73,8 +73,7 @@ commands = [
     'set ftp:ssl-force yes', 'set ftp:ssl-auth TLS',
     'set ftp:ssl-protect-data yes', 'set ssl:verify-certificate yes',
     'set ftp:passive-mode yes', 'set xfer:clobber yes',
-    'open ftp://ams201.greengeeks.net:21',
-    'user "deploy@sacmaca.com" ' + quote(password),
+    'open -u ' + quote('deploy@sacmaca.com,' + password) + ' ftp://ams201.greengeeks.net:21',
     'cd /', 'cls -d index.php wp-admin wp-content wp-includes',
 ]
 for name in files:
@@ -85,12 +84,33 @@ for name in files:
 commands.append('bye')
 # Pipe commands in memory. Never use a credential-bearing command argument/file.
 # Suppress raw client output because authentication failures can echo input.
+def failure_reason(output):
+    # Only return fixed descriptions, never server/client text or credentials.
+    output = output.lower()
+    if '530' in output or 'login failed' in output:
+        return ('Server rejected authentication (FTP 530). Re-enter the dedicated FTP '
+                'account password using ./deploy.sh --setup-keychain. If it still fails, '
+                'the FTP account/password or account access needs verification with the host.')
+    if 'certificate' in output:
+        return 'TLS certificate validation failed; verify server certificate/trust without disabling verification.'
+    if any(x in output for x in ('name or service', 'nodename', 'name resolution', 'host name lookup')):
+        return 'FTPS hostname lookup failed; check DNS and network access.'
+    if '550' in output:
+        return 'Server denied access to an expected path (FTP 550); check account root and permissions.'
+    if 'connection refused' in output:
+        return 'FTPS connection refused; check server availability and port 21 access.'
+    if 'timed out' in output or 'timeout' in output:
+        return 'FTPS connection timed out; check network and passive FTP access.'
+    return 'FTPS client failed. Further terminal diagnosis is needed; raw output suppressed to protect credentials.'
+
+failure_context = ('Read-only check failed; no files were uploaded. ' if mode == '--check'
+                   else 'Upload failed; selected files may be partial. ')
 try:
     result = subprocess.run([lftp, '--norc'], input='\n'.join(commands) + '\n',
         text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=300)
 except subprocess.TimeoutExpired:
-    fail('FTPS timed out; uploads may be partial. Raw output suppressed to protect credentials.')
+    fail(failure_context + 'FTPS timed out.')
 if result.returncode:
-    fail('FTPS failed; uploads may be partial. Check Keychain access, connectivity, certificate trust, and remote paths. Raw output suppressed to protect credentials.')
+    fail(failure_context + failure_reason(result.stderr + result.stdout))
 print('FTPS root check passed.' if mode == '--check' else 'Uploaded:\n' + '\n'.join(files))
 PY

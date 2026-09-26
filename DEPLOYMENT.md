@@ -35,6 +35,10 @@ before this script will upload them.
 
 Explicit TLS on port 21 and certificate verification are mandatory. Passwords
 are passed to lftp through an in-memory stdin pipe. Raw client output is suppressed
-to prevent credential leakage. A failed upload can leave a partial file; correct
+to prevent credential leakage; fixed diagnostic messages identify common errors.
+FTP 530 means the server rejected authentication. Re-enter the dedicated FTP
+password using `--setup-keychain`; if rejection persists, verify the account and
+password with the host. A `--check` failure never uploads or changes remote files.
+A failed upload can leave a partial file; correct
 the cause and retry the selected file. No application files need uploading when
 only these local deployment instructions/tools change.
